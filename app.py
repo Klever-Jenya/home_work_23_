@@ -1,8 +1,6 @@
 from flask import Flask
 
 from views import main_bp
-
-
 def create_app():
     """  функция приложения
     создаем класс Flask-а
