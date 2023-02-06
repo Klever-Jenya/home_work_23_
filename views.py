@@ -2,13 +2,13 @@ from flask import request, Blueprint, jsonify
 from marshmallow import ValidationError
 
 from builder import build_query
-from models import RequestSchema, BatchRequestSchema
+from models import BatchRequestSchema
 
 main_bp = Blueprint('main', __name__)
 
 
 
-# FILE_NAME = "data/apache_logs.txt"
+FILE_NAME = "data/apache_logs.txt"
 
 
 @main_bp.route("/perform_query/", methods=["POST"])
