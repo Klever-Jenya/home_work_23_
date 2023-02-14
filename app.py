@@ -1,7 +1,7 @@
 from flask import Flask
 
 from views import main_bp
-def create_app():
+def create_app() -> Flask:
     """  функция приложения
     создаем класс Flask-а
     и регистрируем блюпринт  """

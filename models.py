@@ -1,6 +1,6 @@
 from marshmallow import Schema, fields, validates_schema, ValidationError, validate
 
-VALID_CMD_COMMANDS = ("filter", "unique", "map", "limit", "sort")
+VALID_CMD_COMMANDS = ("filter", "unique", "map", "limit", "sort", "regex")
 
 """
 валидируем строчками
@@ -8,7 +8,7 @@ VALID_CMD_COMMANDS = ("filter", "unique", "map", "limit", "sort")
 """
 
 
-class RequestSchema(Schema):
+class RequestSchema(Schema):  # Iterable[Mapping[str, Any]]]
     cmd = fields.Str(required=True, validate=validate.OneOf(VALID_CMD_COMMANDS))
     value = fields.Str(required=True)
 
