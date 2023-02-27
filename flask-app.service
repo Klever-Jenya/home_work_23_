@@ -1,0 +1,10 @@
+[Unit]
+Description=Flask app service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/jklever/home_work_23_/home_work_23_
+ExecStart=/home/jklever/home_work_23_/home_work_23_/venv/bin/python run.py
+
+[Install]
+WantedBy=multi-user.target
